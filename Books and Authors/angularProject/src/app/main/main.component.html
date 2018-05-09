@@ -1,0 +1,17 @@
+<h5>All Authors Table</h5>
+<button (click) = "goCreate()" >Create</button>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Buttons</th>
+  </tr>
+  <tr *ngFor = "let object of allAuthorArray">
+    <td>{{object.firstName}}</td>
+    <td>{{object.lastName}}</td>
+    <td>
+      <button (click) = "editTransition(object)">Edit</button>
+      <button (click) = "delete(object)"> delete </button>
+    </td>
+  </tr>
+</table>

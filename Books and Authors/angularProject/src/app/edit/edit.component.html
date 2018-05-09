@@ -1,0 +1,12 @@
+<!-- <h5>Edit Author Form</h5> -->
+<!-- {{editAuthor | json}} -->
+
+<div *ngIf = "error" >
+  <p>{{ error }}</p>
+</div>
+
+<form>
+  First Name: <input type="text" name="theUpdate.firstName" [(ngModel)] = "theUpdate.firstName" >
+  Last Name: <input type="text" name="theUpdate.lastName" [(ngModel)] = "theUpdate.lastName" >
+  <button (click) = "updateAuthorByID()" >Submit</button>
+</form>

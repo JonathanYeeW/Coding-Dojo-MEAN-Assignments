@@ -1,0 +1,10 @@
+<!-- <h5>Create Author Form</h5> -->
+<!-- {{newAuthor | json}} -->
+<div *ngIf = "error" >
+  <p>{{ error }}</p>
+</div>
+<form>
+  First Name <input type="text" name="newAuthor.firstName" [(ngModel)] = "newAuthor.firstName">
+  Last Name <input type="text" name="newAuthor.lastName" [(ngModel)] = "newAuthor.lastName" >
+  <button (click) = "createAuthor()" >Create Author</button>
+</form>
